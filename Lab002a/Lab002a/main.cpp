@@ -1,6 +1,3 @@
-// Lab002.cpp : Defines the entry point for the console application.
-//
-
 /*
 Program Description: Determines numerical score to letter grade
 Program Author: Erik Argueta
