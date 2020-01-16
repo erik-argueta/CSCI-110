@@ -7,9 +7,20 @@
 //
 
 #include <iostream>
+#include <string>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+using namespace std;
+
+string first;
+string last;
+string full;
+
+int main()
+{
+    cout << "Please enter your full name: " << endl;
+    cin >> first >> last;
+    cout << endl;
+    
+    cout << "Welcome " << first << "!" << endl;
+    
 }
