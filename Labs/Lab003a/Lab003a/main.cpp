@@ -73,13 +73,6 @@ int main()
     double result5 = cone_volume(r, h);
     double result6 = cone_surface(r, h);
     
-    /*
-    cout << "A sphere with the radius of " << r << " has a volume of: " << result1 << endl << endl;
-    cout << "A sphere with the radius of " << r << " has a surface area of: " << result2 << endl << endl;
-    cout << "A cylinder with the radius of " << r << "and a height of " << h << " has a volume of: " << result3 << endl << endl;
-    cout << "A cylinder with the radius of " << r << " and a height of " << h << " has a volume of: " << result4 << endl << endl;
-    cout << "A cone with the radius of " << r << " and a height of " << h << " has a volume of: " << result5 << endl << endl;
-    cout << "A sphere with the radius of " << r << " and a height of " << h << " has a volume of: " << result6 << endl << endl; */
     
     cout << "Shape" << setw(15) << "Volume" << setw(20) << "Surface Area" << endl;
     cout << "_____" << setw(16) << "_______" << setw(19) << "____________" << endl << endl;
