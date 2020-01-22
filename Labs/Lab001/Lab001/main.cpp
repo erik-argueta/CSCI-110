@@ -32,11 +32,6 @@ int main()
     int time04;
     bool resume = false;
     
-    cout << "Please enter your name: ";
-    cin >> name;
-    cout << endl;
-    cout << "Hello, " << name << "!" << endl;
-
     while (resume == false)
     {
         cout << "Please insert the first time in military format: ";

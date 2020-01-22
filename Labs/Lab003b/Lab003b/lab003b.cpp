@@ -1,17 +1,5 @@
 /*
- Write a function void sort2(int& a, int& b) that swaps the values of a and b if a is greater than b and otherwise leaves a and b unchanged. For example,
- int u = 2;
- int v = 3;
- int w = 4;
- int x = 1;
- sort2(u, v); // u is still 2, v is still 3
- sort2(w, x); // w is now 1, x is now 4
- */
 
-/**
-int a = b is setting a's VALUE to b's VALUE
-int* a = &b is setting a's VALUE to the ADDRESS of b
-int& a = b is setting a's ADDRESS to b's ADDRESS (a is a reference to b)
 */
 
 #include <iostream>
@@ -24,19 +12,69 @@ int u = 2;
 int v = 3;
 int w = 4;
 int x = 1;
+int place_holder1;
+int place_holder2;
+string input_a;
+string input_b;
+
+int digit1 (string input_a)
+{
+	if (input_a == "u") return 2;
+	if (input_a == "v") return 3;
+	if (input_a == "w") return 4;
+	if (input_a == "x") return 1;
+	return 0;
+}
+
+int digit2 (string input_b)
+{
+	if (input_b == "u") return 2;
+	if (input_b == "v") return 3;
+	if (input_b == "w") return 4;
+	if (input_b == "x") return 1;
+	return 0;
+}
+
 
 /** Attempt to create a void function */
-void sort2(int& a, int& b)
+void sort2(int digit1, int digit2)
 {
-	
+	if (digit1 > digit2)
+	{
+		swap(digit1, digit2);
+		cout << input_a << " = " << digit1 << endl;
+		cout << input_b << " = " << digit2 << endl;
+		
+		
+	}
+	else
+	{
+		cout << "u = " << u << endl << "v = " << v << endl;
+		cout << "w = " << w << endl << "x = " << x << endl << endl;
+		cout << "Nothing has changed" << endl;
+	}
 }
 
 
 
 int main()
 {
-	cout << "u = 2" << endl << "v = 3" << endl;
-	cout << "w = 4" << endl << "x = 1" << endl << endl;
+	cout << "u = " << u << endl << "v = " << v << endl;
+	cout << "w = " << w << endl << "x = " << x << endl << endl;
 	
+	cout << "Please enter two variables: " << endl;
+	
+	cout << "1. ";
+	cin >> input_a;
+	digit1(input_a);
+	
+	cout << "2. ";
+	cin >> input_b;
+	digit2(input_b);
+	
+	cout << endl;
+
+	sort2(digit1(input_a), digit2(input_b));
+
 	return 0;
 }
