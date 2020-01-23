@@ -49,32 +49,7 @@ int main()
                 while (position1 < word1.length())
                 {
                     string ch = word1.substr(position1, 2);
-                    if (ch == "aa" || ch == "ee" || ch == "ii" || ch == "oo" || ch == "uu" || ch == "yy")
-                    {
-                        syl1++;
-                        position1++;
-                    }
-                    else if (ch == "ae" || ch == "ea" || ch == "ai" || ch == "ia" || ch == "ao" || ch == "oa" || ch == "au" || ch == "ua" || ch == "ay" || ch == "ya")
-                    {
-                        syl1++;
-                        position1++;
-                    }
-                    else if (ch == "ei" || ch == "ie" || ch == "eo" || ch == "oe" || ch == "eu" || ch == "ue" || ch == "ey" || ch == "ye")
-                    {
-                        syl1++;
-                        position1++;
-                    }
-                    else if (ch == "io" || ch == "oi" || ch == "iu" || ch == "ui" || ch == "iy" || ch == "yi")
-                    {
-                        syl1++;
-                        position1++;
-                    }
-                    else if (ch == "ou" || ch == "uo" || ch == "oy" || ch == "yo")
-                    {
-                        syl1++;
-                        position1++;
-                    }
-                    else if (ch == "uy" || ch == "yu")
+                    if (ch == "aa" || ch == "ee" || ch == "ii" || ch == "oo" || ch == "uu" || ch == "yy" || ch == "uy" || ch == "yu" || ch == "ae" || ch == "ea" || ch == "ai" || ch == "ia" || ch == "ao" || ch == "oa" || ch == "au" || ch == "ua" || ch == "ay" || ch == "ya" || ch == "ei" || ch == "ie" || ch == "eo" || ch == "oe" || ch == "eu" || ch == "ue" || ch == "ey" || ch == "ye" || ch == "io" || ch == "oi" || ch == "iu" || ch == "ui" || ch == "iy" || ch == "yi" || ch == "ou" || ch == "uo" || ch == "oy" || ch == "yo")
                     {
                         syl1++;
                         position1++;
@@ -137,32 +112,7 @@ int main()
                 while (position1 < word2.length())
                 {
                     string ch = word2.substr(position1, 2);
-                    if (ch == "aa" || ch == "ee" || ch == "ii" || ch == "oo" || ch == "uu" || ch == "yy")
-                    {
-                        syl1++;
-                        position1++;
-                    }
-                    else if (ch == "ae" || ch == "ea" || ch == "ai" || ch == "ia" || ch == "ao" || ch == "oa" || ch == "au" || ch == "ua" || ch == "ay" || ch == "ya")
-                    {
-                        syl1++;
-                        position1++;
-                    }
-                    else if (ch == "ei" || ch == "ie" || ch == "eo" || ch == "oe" || ch == "eu" || ch == "ue" || ch == "ey" || ch == "ye")
-                    {
-                        syl1++;
-                        position1++;
-                    }
-                    else if (ch == "io" || ch == "oi" || ch == "iu" || ch == "ui" || ch == "iy" || ch == "yi")
-                    {
-                        syl1++;
-                        position1++;
-                    }
-                    else if (ch == "ou" || ch == "uo" || ch == "oy" || ch == "yo")
-                    {
-                        syl1++;
-                        position1++;
-                    }
-                    else if (ch == "uy" || ch == "yu")
+                    if (ch == "aa" || ch == "ee" || ch == "ii" || ch == "oo" || ch == "uu" || ch == "yy" || ch == "uy" || ch == "yu" || ch == "ae" || ch == "ea" || ch == "ai" || ch == "ia" || ch == "ao" || ch == "oa" || ch == "au" || ch == "ua" || ch == "ay" || ch == "ya" || ch == "ei" || ch == "ie" || ch == "eo" || ch == "oe" || ch == "eu" || ch == "ue" || ch == "ey" || ch == "ye" || ch == "io" || ch == "oi" || ch == "iu" || ch == "ui" || ch == "iy" || ch == "yi" || ch == "ou" || ch == "uo" || ch == "oy" || ch == "yo")
                     {
                         syl1++;
                         position1++;
@@ -225,32 +175,7 @@ int main()
                 while (position1 < word3.length())
                 {
                     string ch = word3.substr(position1, 2);
-                    if (ch == "aa" || ch == "ee" || ch == "ii" || ch == "oo" || ch == "uu" || ch == "yy")
-                    {
-                        syl1++;
-                        position1++;
-                    }
-                    else if (ch == "ae" || ch == "ea" || ch == "ai" || ch == "ia" || ch == "ao" || ch == "oa" || ch == "au" || ch == "ua" || ch == "ay" || ch == "ya")
-                    {
-                        syl1++;
-                        position1++;
-                    }
-                    else if (ch == "ei" || ch == "ie" || ch == "eo" || ch == "oe" || ch == "eu" || ch == "ue" || ch == "ey" || ch == "ye")
-                    {
-                        syl1++;
-                        position1++;
-                    }
-                    else if (ch == "io" || ch == "oi" || ch == "iu" || ch == "ui" || ch == "iy" || ch == "yi")
-                    {
-                        syl1++;
-                        position1++;
-                    }
-                    else if (ch == "ou" || ch == "uo" || ch == "oy" || ch == "yo")
-                    {
-                        syl1++;
-                        position1++;
-                    }
-                    else if (ch == "uy" || ch == "yu")
+                    if (ch == "aa" || ch == "ee" || ch == "ii" || ch == "oo" || ch == "uu" || ch == "yy" || ch == "uy" || ch == "yu" || ch == "ae" || ch == "ea" || ch == "ai" || ch == "ia" || ch == "ao" || ch == "oa" || ch == "au" || ch == "ua" || ch == "ay" || ch == "ya" || ch == "ei" || ch == "ie" || ch == "eo" || ch == "oe" || ch == "eu" || ch == "ue" || ch == "ey" || ch == "ye" || ch == "io" || ch == "oi" || ch == "iu" || ch == "ui" || ch == "iy" || ch == "yi" || ch == "ou" || ch == "uo" || ch == "oy" || ch == "yo")
                     {
                         syl1++;
                         position1++;
@@ -313,32 +238,7 @@ int main()
                 while (position1 < word4.length())
                 {
                     string ch = word4.substr(position1, 2);
-                    if (ch == "aa" || ch == "ee" || ch == "ii" || ch == "oo" || ch == "uu" || ch == "yy")
-                    {
-                        syl1++;
-                        position1++;
-                    }
-                    else if (ch == "ae" || ch == "ea" || ch == "ai" || ch == "ia" || ch == "ao" || ch == "oa" || ch == "au" || ch == "ua" || ch == "ay" || ch == "ya")
-                    {
-                        syl1++;
-                        position1++;
-                    }
-                    else if (ch == "ei" || ch == "ie" || ch == "eo" || ch == "oe" || ch == "eu" || ch == "ue" || ch == "ey" || ch == "ye")
-                    {
-                        syl1++;
-                        position1++;
-                    }
-                    else if (ch == "io" || ch == "oi" || ch == "iu" || ch == "ui" || ch == "iy" || ch == "yi")
-                    {
-                        syl1++;
-                        position1++;
-                    }
-                    else if (ch == "ou" || ch == "uo" || ch == "oy" || ch == "yo")
-                    {
-                        syl1++;
-                        position1++;
-                    }
-                    else if (ch == "uy" || ch == "yu")
+                    if (ch == "aa" || ch == "ee" || ch == "ii" || ch == "oo" || ch == "uu" || ch == "yy" || ch == "uy" || ch == "yu" || ch == "ae" || ch == "ea" || ch == "ai" || ch == "ia" || ch == "ao" || ch == "oa" || ch == "au" || ch == "ua" || ch == "ay" || ch == "ya" || ch == "ei" || ch == "ie" || ch == "eo" || ch == "oe" || ch == "eu" || ch == "ue" || ch == "ey" || ch == "ye" || ch == "io" || ch == "oi" || ch == "iu" || ch == "ui" || ch == "iy" || ch == "yi" || ch == "ou" || ch == "uo" || ch == "oy" || ch == "yo")
                     {
                         syl1++;
                         position1++;
