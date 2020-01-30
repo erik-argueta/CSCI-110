@@ -1,0 +1,3 @@
+﻿  roudoff errors.cpp
+c:\users\csci.instruction\source\repos\roudoff errors\roudoff errors\roudoff errors.cpp(14): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  roudoff errors.vcxproj -> C:\Users\csci.INSTRUCTION\source\repos\roudoff errors\Debug\roudoff errors.exe
