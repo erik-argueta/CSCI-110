@@ -36,6 +36,7 @@ int digit2(string input_b)
 	return 0;
 }
 
+
 /** The Void function sorts the values */
 void sort2(int digit1, int digit2)
 {
