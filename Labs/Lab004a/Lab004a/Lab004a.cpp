@@ -121,78 +121,82 @@ bool equals2(int c, int d)
 
 int main()
 {
-	cout << "Please enter two sets of numbers in the SAME sequence." << endl;
-	cout << "There must be ten values for each set." << endl << endl;
-
-	cout << "Set A: ";
-	a(input_a);
-
-	//cout << endl;
-
-	cout << "Set B: ";
-	b(input_b);
-
-	cout << endl;
-
-	for (int pos = 0; pos != 10; pos++)
+	// Sets A & B
 	{
-		if (array_a[pos] == array_b[pos])
+		cout << "Please enter two sets of numbers in the SAME sequence." << endl;
+		cout << "There must be TEN values for each set." << endl << endl;
+
+		cout << "Set A: ";
+		a(input_a);
+
+		//cout << endl;
+
+		cout << "Set B: ";
+		b(input_b);
+
+		cout << endl;
+
+		for (int pos = 0; pos != 10; pos++)
 		{
-			counter++;
+			if (array_a[pos] == array_b[pos])
+			{
+				counter++;
+			}
 		}
+
+		equals(a(input_a), b(input_b));
+
+
+		if ((equals(a(input_a), b(input_b))))
+		{
+			cout << "The sets are different." << endl;
+		}
+
+		if (!equals(a(input_a), b(input_b)))
+		{
+			cout << "The sets are exactly the same." << endl;
+		}
+
 	}
-
-	equals(a(input_a), b(input_b));
-
-
-	if ((equals(a(input_a), b(input_b))))
-	{
-		cout << "The sets are different." << endl;
-	}
-
-	if (!equals(a(input_a), b(input_b)))
-	{
-		cout << "The sets are exactly the same." << endl;
-	}
-
 	cout << endl << "--------------------------------------" << endl << endl;
 	
-	
-	cout << "Please enter two sets of numbers in a DIFFERENT sequence." << endl;
-	cout << "There must be ten values for each set." << endl << endl;
-
-	cout << "Set A: ";
-	c(input_c);
-
-	//cout << endl;
-
-	cout << "Set B: ";
-	d(input_d);
-
-	cout << endl;
-
-	for (int pos = 0; pos != 10; pos++)
+	// Sets C & D
 	{
-		if (array_c[pos] == array_d[pos])
+		cout << "Please enter two sets of numbers in a DIFFERENT sequence." << endl;
+		cout << "There must be TEN values for each set." << endl << endl;
+
+		cout << "Set C: ";
+		c(input_c);
+
+		cout << "Set D: ";
+		d(input_d);
+
+		cout << endl;
+
+		for (int pos = 0; pos != 10; pos++)
 		{
-			counter2++;
+			if (array_c[pos] == array_d[pos])
+			{
+				counter2++;
+			}
 		}
+
+		equals2(c(input_c), d(input_d));
+
+
+		if ((equals2(c(input_c), d(input_d))))
+		{
+			cout << "The sets are different." << endl;
+		}
+
+		if (!equals2(c(input_c), d(input_d)))
+		{
+			cout << "The sets are exactly the same." << endl;
+		}
+
+		cout << endl << endl;
+	
 	}
-
-	equals2(c(input_c), d(input_d));
-
-
-	if ((equals2(c(input_c), d(input_d))))
-	{
-		cout << "The sets are different." << endl;
-	}
-
-	if (!equals2(c(input_c), d(input_d)))
-	{
-		cout << "The sets are exactly the same." << endl;
-	}
-
-	cout << endl << endl;
 	
 
 	//system("pause");
