@@ -145,7 +145,24 @@ int main()
 		}
 
 		equals(a(input_a), b(input_b));
+		
+		cout << "Set A: ";
 
+		for (int z = 0; z != 10; z++)
+		{
+			cout << " " << array_a[z];
+		}
+		
+		cout << endl;
+		
+		cout << "Set B: ";
+
+		for (int z = 0; z != 10; z++)
+		{
+			cout << " " << array_b[z];
+		}
+		
+		cout << endl;
 
 		if ((equals(a(input_a), b(input_b))))
 		{
@@ -158,8 +175,8 @@ int main()
 		}
 
 	}
-	cout << endl << "--------------------------------------" << endl << endl;
-	
+	cout << endl << "-------------------------------------------------------------" << endl << endl;
+
 	// Sets C & D
 	{
 		cout << "Please enter two sets of numbers in a DIFFERENT sequence." << endl;
@@ -182,6 +199,24 @@ int main()
 		}
 
 		equals2(c(input_c), d(input_d));
+		
+		cout << "Set C: ";
+
+		for (int z = 0; z != 10; z++)
+		{
+			cout << " " << array_c[z];
+		}
+		
+		cout << endl;
+		
+		cout << "Set D: ";
+
+		for (int z = 0; z != 10; z++)
+		{
+			cout << " " << array_d[z];
+		}
+		
+		cout << endl;
 
 
 		if ((equals2(c(input_c), d(input_d))))
@@ -198,7 +233,6 @@ int main()
 	
 	}
 	
-
 	//system("pause");
 	return 0;
 }
