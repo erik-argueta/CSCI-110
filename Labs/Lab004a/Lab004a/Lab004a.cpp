@@ -34,8 +34,6 @@ int array_b[CAPACITY_B];
 int array_c[CAPACITY_C];
 int array_d[CAPACITY_D];
 
-
-
 int a(int input_a)
 {
 	while (current_size_a < CAPACITY_A)
@@ -49,7 +47,6 @@ int a(int input_a)
 	}
 	return array_a[current_size_a];
 }
-
 
 int b(int input_b)
 {
@@ -175,6 +172,7 @@ int main()
 		}
 
 	}
+	
 	cout << endl << "-------------------------------------------------------------" << endl << endl;
 
 	// Sets C & D
@@ -217,8 +215,7 @@ int main()
 		}
 		
 		cout << endl;
-
-
+		
 		if ((equals2(c(input_c), d(input_d))))
 		{
 			cout << "The sets are different." << endl;
@@ -230,7 +227,6 @@ int main()
 		}
 
 		cout << endl << endl;
-	
 	}
 	
 	//system("pause");

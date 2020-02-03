@@ -14,8 +14,75 @@
 
 using namespace std;
 
+const int CAPACITY = 9;
+int current_size = 9;
+
+void array_copy(int array1[], int array2[])
+{
+	for (int i = 0; i < current_size; i++)
+	{
+		array2[i] = array1[i];
+	}
+}
+
+void duplicate_rem(int array1[], int array2[])
+{
+	for (int i = 0; i < current_size; i++)
+	{
+		if (array1[i] == array2[i])
+		{
+			array2[i - 1] = array2[i];
+			current_size--;
+		}
+	}
+}
+
+
 int main()
 {
+	const int CAPACITY = 9;
+	int array_a[] = {1, 4, 9, 16, 9, 7, 4, 9, 11};
+	int array_b[CAPACITY];
+	
+	
+	for (int i = 0; i < CAPACITY; i++)
+	{
+		cout << array_a[i] << " ";
+	}
+	cout << endl << endl;
+	
+	// Array Copy Function
+	{
+		array_copy(array_a, array_b);
+		
+		for (int i = 0; i < CAPACITY; i++)
+		{
+			cout << array_a[i] << " ";
+		}
+		cout << endl << endl;
+		
+		for (int i = 0; i < CAPACITY; i++)
+		{
+			cout << array_b[i] << " ";
+		}
+	}
+	
+	cout << endl << endl;
+	
+	// Duplicate Removal Function
+	{
+		duplicate_rem(array_a, array_b);
+		
+		for (int i = 0; i < current_size; i++)
+		{
+			cout << array_b[i] << " ";
+		}
+	}
+	
+	cout << endl << endl;
+	
+	
+	
 
 	// system("pause");
 	return 0;

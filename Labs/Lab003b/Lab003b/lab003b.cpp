@@ -94,7 +94,7 @@ int main()
 {
 	while (!repeat)
 	{
-		cout << "Table:" << endl;
+		cout << "Table" << endl << "-----" << endl;
 		cout << "u = " << u << endl << "v = " << v << endl;
 		cout << "w = " << w << endl << "x = " << x << endl << endl;
 
