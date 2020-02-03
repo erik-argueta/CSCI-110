@@ -18,15 +18,17 @@ int main()
 	int position = 0;
 	float a_value;
 	float b_value;
+	
+	
+	
 
 	for (int i = 0; i < 10; i++)
 	{
+		cout << "values [" << i << "] = " <<  values[i] << endl;
 		/*
 		total = total + values[i];
 		avg = total / SIZE;
-		*/
-		cout << "values [" << i << "] = " <<  values[i] << endl;
-		/*
+		 
 		if (values[i] > max)
 		{
 			max = values[i];
@@ -70,6 +72,6 @@ int main()
 
 
 	//system("pause");
-    return 0;
+	return 0;
 }
 
