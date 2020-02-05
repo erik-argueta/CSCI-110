@@ -22,17 +22,9 @@ bool equals(int a[], int a_size, int b[], int b_size)
 		}
 	}
 
-	if (counter < 10)
-	{
-		return false;
-		
-	}
+	if (counter < 10) { return false; }
 	
-	else
-	{
-		return true;
-		
-	}
+	else { return true; }
 }
 
 
