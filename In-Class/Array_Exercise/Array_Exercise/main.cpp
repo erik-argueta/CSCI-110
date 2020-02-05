@@ -1,42 +1,51 @@
 // Array001.cpp : Defines the entry point for the console application.
 //
 
-// #include "stdafx.h"
+#include "stdafx.h"
 #include <iostream>
+#include <algorithm> // allows use of sort()
 
 using namespace std;
 
+double sum(double data[], int size)
+{
+	double total = 0;
+	for (int i = 0; i < CAPACITY; i++)
+	{
+		total = total + data[i];
+	}
+	return total;
+}
 
 int main()
 {
 	float total = 0;
 	float avg = 0;
-	const int SIZE = 10;
 	float values[] = { 32, 54, 67.5, 29, 35, 80, 115, 44.5, 100, 65 };
 	float min = values[0];
 	float max = values[0];
+	const int CAPACITY = 10;
 	int position = 0;
+	int current_size = 10;
 	float a_value;
 	float b_value;
-	
-	
-	
 
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < current_size; i++)
 	{
-		cout << "values [" << i << "] = " <<  values[i] << endl;
+		cout << "values [" << i << "] = " << values[i] << endl;
 		/*
+
 		total = total + values[i];
 		avg = total / SIZE;
-		 
+
 		if (values[i] > max)
 		{
-			max = values[i];
+		max = values[i];
 		}
-		
+
 		if (values[i] < min)
 		{
-			min = values[i];
+		min = values[i];
 		}
 		*/
 	}
@@ -48,6 +57,7 @@ int main()
 	cout << "Min is " << min << endl;
 	*/
 
+	/*
 	cout << "Please enter a number to search for: ";
 	cin >> a_value;
 
@@ -69,9 +79,73 @@ int main()
 	{
 		cout << "values [" << i << "] = " << values[i] << endl;
 	}
+	*/
 
+	cout << endl;
 
-	//system("pause");
+	// Removing an Element in Ordered Array
+	{
+		cout << "Please enter a position: ";
+		cin >> a_value;
+
+		position = a_value;
+		position = position - 1;
+		for (int i = position + 1; i < current_size; i++)
+		{
+			values[i - 1] = values[i];
+		}
+		current_size--;
+
+		for (int i = 0; i < current_size; i++)
+		{
+			cout << "values [" << i << "] = " << values[i] << endl;
+		}
+	}
+
+	cout << endl;
+
+	// Inserting Value in Ordered Array
+	{
+		cout << "Please enter a Number: ";
+		cin >> b_value;
+
+		if (current_size < CAPACITY)
+		{
+			current_size++;
+			for (int i = current_size - 1; i > position; i--)
+			{
+				values[i] = values[i - 1];
+			}
+			values[position] = b_value;
+		}
+
+		for (int i = 0; i < current_size; i++)
+		{
+			cout << "values [" << i << "] = " << values[i] << endl;
+		}
+	}
+
+	cout << endl << endl;
+
+	// Sorting and sorting reversed
+	{
+		sort(values, values + current_size);
+
+		for (int i = 0; i < current_size; i++)
+		{
+			cout << "values [" << i << "] = " << values[i] << endl;
+		}
+
+		cout << endl << endl;
+
+		reverse(values, values + current_size);
+		for (int i = 0; i < current_size; i++)
+		{
+			cout << "values [" << i << "] = " << values[i] << endl;
+		}
+	}
+
+	system("pause");
 	return 0;
 }
 

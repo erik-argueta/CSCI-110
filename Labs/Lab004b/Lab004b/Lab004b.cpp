@@ -12,71 +12,54 @@
 //#include "stdafx.h"
 #include <iostream>
 
+
 using namespace std;
 
-const int CAPACITY = 9;
-int current_size = 9;
-
-void array_copy(int array1[], int array2[])
+void removeNumber(int array1[], int index, int &size)
 {
-	for (int i = 0; i < current_size; i++)
+	for(int i = 0; i < size; i++)
 	{
-		array2[i] = array1[i];
+		array1[i] = array1[i + 1];
 	}
+	size--;
 }
-
-void duplicate_rem(int array1[], int array2[])
+void removeDuplicates(int array1[], int& size)
 {
-	for (int i = 0; i < current_size; i++)
+	int i, j;
+	int number;
+	for (i = 0; i < size; i++)
 	{
-		if (array1[i] == array2[i])
+		number = array1[i];
+		for (j = i + 1; j < size; j++)
 		{
-			array2[i - 1] = array2[i];
-			current_size--;
+			if (number == array1[j])
+			{
+				removeNumber(array1, j, size);
+				j--;
+			}
 		}
 	}
 }
-
 
 int main()
 {
-	const int CAPACITY = 9;
+	int capacity = 9;
 	int array_a[] = {1, 4, 9, 16, 9, 7, 4, 9, 11};
-	int array_b[CAPACITY];
 	
-	
-	for (int i = 0; i < CAPACITY; i++)
+	cout << "Set 1 (with Duplicates) ";
+	for (int i = 0; i < capacity; i++)
 	{
 		cout << array_a[i] << " ";
 	}
-	cout << endl << endl;
 	
-	// Array Copy Function
-	{
-		array_copy(array_a, array_b);
-		
-		for (int i = 0; i < CAPACITY; i++)
-		{
-			cout << array_a[i] << " ";
-		}
-		cout << endl << endl;
-		
-		for (int i = 0; i < CAPACITY; i++)
-		{
-			cout << array_b[i] << " ";
-		}
-	}
+	removeDuplicates(array_a, capacity);
 	
 	cout << endl << endl;
 	
-	// Duplicate Removal Function
+	cout << "Set 1 (without Duplicates) ";
+	for (int i = 0; i < capacity; i++)
 	{
-		duplicate_rem(array_a, array_b);
-		
-		for (int i = 0; i < current_size; i++)
-		{
-			cout << array_b[i] << " ";
-		}
+		cout << array_a[i] << " ";
 	}
 	
 	cout << endl << endl;
