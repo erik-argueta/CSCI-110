@@ -1,234 +1,141 @@
-// Lab004a.cpp : Defines the entry point for the console application.
-//
-
-
 /*
-Write a function
-bool equals(int a[], int a_size, int b[], int b_size)
-that checks whether two arrays have the same elements in the same order
+Program Author: Erik Argueta
 */
 
 
 //#include "stdafx.h"
 #include <iostream>
-#include <string>
 
 using namespace std;
 
-const int CAPACITY_A = 10;
-const int CAPACITY_B = 10;
-const int CAPACITY_C = 10;
-const int CAPACITY_D = 10;
-int input_a;
-int input_b;
-int input_c;
-int input_d;
-int counter = 0;
-int counter2 = 0;
-int current_size_a = 0;
-int current_size_b = 0;
-int current_size_c = 0;
-int current_size_d = 0;
-int array_a[CAPACITY_A];
-int array_b[CAPACITY_B];
-int array_c[CAPACITY_C];
-int array_d[CAPACITY_D];
-
-int a(int input_a)
+bool equals(int a[], int a_size, int b[], int b_size)
 {
-	while (current_size_a < CAPACITY_A)
+	int counter = 0;
+
+	if (a_size != b_size) { return false; }
+
+	for (int i = 0; i < a_size; i++)
 	{
-		cin >> input_a;
-		if (current_size_a < CAPACITY_A)
+		if (a[i] == b[i])
 		{
-			array_a[current_size_a] = input_a;
-			current_size_a++;
+			counter++;
 		}
 	}
-	return array_a[current_size_a];
-}
 
-int b(int input_b)
-{
-	while (current_size_b < CAPACITY_B)
-	{
-		cin >> input_b;
-		if (current_size_b < CAPACITY_B)
-		{
-			array_b[current_size_b] = input_b;
-			current_size_b++;
-		}
-	}
-	return array_b[current_size_b];
-}
-
-int c(int input_c)
-{
-	while (current_size_c < CAPACITY_C)
-	{
-		cin >> input_c;
-		if (current_size_c < CAPACITY_C)
-		{
-			array_c[current_size_c] = input_c;
-			current_size_c++;
-		}
-	}
-	return array_c[current_size_c];
-}
-
-int d(int input_d)
-{
-	while (current_size_d < CAPACITY_D)
-	{
-		cin >> input_d;
-		if (current_size_d < CAPACITY_D)
-		{
-			array_d[current_size_d] = input_d;
-			current_size_d++;
-		}
-	}
-	return array_d[current_size_d];
-}
-
-bool equals(int a, int b)
-{
-	if (counter >= 10)
+	if (counter < 10)
 	{
 		return false;
+		
 	}
-
+	
 	else
 	{
 		return true;
+		
 	}
 }
 
-bool equals2(int c, int d)
-{
-	if (counter2 >= 10)
-	{
-		return false;
-	}
-
-	else
-	{
-		return true;
-	}
-}
 
 int main()
 {
+	const int CAPACITY = 10;
+	int current_size1 = 0;
+	int current_size2 = 0;
+	int current_size3 = 0;
+	int current_size4 = 0;
+	int array1[CAPACITY];
+	int array2[CAPACITY];
+	int array3[CAPACITY];
+	int array4[CAPACITY];
+	int input1;
+	int input2;
+	int input3;
+	int input4;
+
 	// Sets A & B
 	{
-		cout << "Please enter two sets of numbers in the SAME sequence." << endl;
+		cout << "Please enter two arrays of numbers in the SAME sequence." << endl;
 		cout << "There must be TEN values for each set." << endl << endl;
 
-		cout << "Set A: ";
-		a(input_a);
-
-		//cout << endl;
-
-		cout << "Set B: ";
-		b(input_b);
-
-		cout << endl;
-
-		for (int pos = 0; pos != 10; pos++)
+		cout << "Array A: ";
+		while (current_size1 < CAPACITY)
 		{
-			if (array_a[pos] == array_b[pos])
+			cin >> input1;
+			if (current_size1 < CAPACITY)
 			{
-				counter++;
+				array1[current_size1] = input1;
+				current_size1++;
 			}
 		}
 
-		equals(a(input_a), b(input_b));
-		
-		cout << "Set A: ";
-
-		for (int z = 0; z != 10; z++)
+		cout << "Array B: ";
+		while (current_size2 < CAPACITY)
 		{
-			cout << " " << array_a[z];
+			cin >> input2;
+			if (current_size2 < CAPACITY)
+			{
+				array2[current_size2] = input2;
+				current_size2++;
+			}
 		}
-		
-		cout << endl;
-		
-		cout << "Set B: ";
-
-		for (int z = 0; z != 10; z++)
-		{
-			cout << " " << array_b[z];
-		}
-		
 		cout << endl;
 
-		if ((equals(a(input_a), b(input_b))))
-		{
-			cout << "The sets are different." << endl;
-		}
+		bool result = equals(array1, current_size1, array2, current_size2);
 
-		if (!equals(a(input_a), b(input_b)))
+		if (result)
 		{
-			cout << "The sets are exactly the same." << endl;
+			cout << "The two arrays are identical." << endl;
 		}
-
+		else
+		{
+			cout << "The two arrays are NOT identical." << endl;
+		}
 	}
-	
+
 	cout << endl << "-------------------------------------------------------------" << endl << endl;
 
-	// Sets C & D
+	// Array C & D
 	{
-		cout << "Please enter two sets of numbers in a DIFFERENT sequence." << endl;
+		cout << "Please enter two arrays of numbers in the SAME sequence." << endl;
 		cout << "There must be TEN values for each set." << endl << endl;
 
-		cout << "Set C: ";
-		c(input_c);
-
-		cout << "Set D: ";
-		d(input_d);
-
-		cout << endl;
-
-		for (int pos = 0; pos != 10; pos++)
+		cout << "Array C: ";
+		while (current_size3 < CAPACITY)
 		{
-			if (array_c[pos] == array_d[pos])
+			cin >> input3;
+			if (current_size3 < CAPACITY)
 			{
-				counter2++;
+				array3[current_size3] = input3;
+				current_size3++;
 			}
 		}
 
-		equals2(c(input_c), d(input_d));
-		
-		cout << "Set C: ";
-
-		for (int z = 0; z != 10; z++)
+		cout << "Array D: ";
+		while (current_size4 < CAPACITY)
 		{
-			cout << " " << array_c[z];
+			cin >> input4;
+			if (current_size4 < CAPACITY)
+			{
+				array4[current_size4] = input4;
+				current_size4++;
+			}
 		}
-		
 		cout << endl;
-		
-		cout << "Set D: ";
 
-		for (int z = 0; z != 10; z++)
-		{
-			cout << " " << array_d[z];
-		}
-		
-		cout << endl;
-		
-		if ((equals2(c(input_c), d(input_d))))
-		{
-			cout << "The sets are different." << endl;
-		}
+		bool result = equals(array3, current_size3, array4, current_size4);
 
-		if (!equals2(c(input_c), d(input_d)))
+		if (result)
 		{
-			cout << "The sets are exactly the same." << endl;
+			cout << "The two arrays are identical." << endl;
 		}
-
-		cout << endl << endl;
+		else
+		{
+			cout << "The two arrays are NOT identical." << endl;
+		}
 	}
 	
+	cout << endl;
+
 	//system("pause");
 	return 0;
 }
