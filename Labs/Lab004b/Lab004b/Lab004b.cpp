@@ -1,27 +1,34 @@
+/*
+ 
+ 
+ 
+ */
+
 #include <iostream>
 
 using namespace std;
 
-void removeNumber(int numbers[], int index, int& size)
+void removeNum(int array1[], int index, int& size)
 {
-	for(int i = index; i < size - 1; i++)
+	for (int i = index; i < size - 1; i++)
 	{
-		numbers[i] = numbers[i + 1];
+		array1[i] = array1[i + 1];
 	}
 	size--;
 }
 
-void removeDuplicate(int numbers[], int& size)
+
+
+void removeDupl(int array1[], int& size)
 {
-	int number;
-	for(int i = 0; i < size; i++)
+	for (int i = 0; i < size; i++)
 	{
-		number = numbers[i];
-		for(int j = i + 1; j < size; j++)
+		int number = array1[i];
+		for (int j = i + 1; j < size; j++)
 		{
-			if(number == numbers[j])
+			if (number == array1[j])
 			{
-				removeNumber(numbers, j, size);
+				removeNum(array1, j, size);
 				j--;
 			}
 		}
@@ -30,28 +37,43 @@ void removeDuplicate(int numbers[], int& size)
 
 int main()
 {
-	int i;
-	int array_1[] = { 1,4,9,16,9,7,4,9,4,11 };
-	int size = 10;
+	int CAPACITY = 9;
+	int current_size = 0;
+	int array_a [CAPACITY];
+	int input;
 	
-	cout << "Set (with Duplicates) ";
-	for (int i = 0; i < size; i++)
+	cout << "Please enter a series of numbers with duplicate values: ";
+	while (current_size < CAPACITY)
 	{
-		cout << array_1[i] << " ";
+		cin >> input;
+		if (current_size < CAPACITY)
+		{
+			array_a[current_size] = input;
+			current_size++;
+		}
+	}
+	
+	cout << endl;
+	
+	cout << "This is the Array you have entered: ";
+	for (int i = 0; i < current_size; i++)
+	{
+		cout << array_a[i] << " ";
 	}
 	
 	cout << endl << endl;
 	
-	removeDuplicate(array_1, size);
 	
-	cout << "Set (without Duplicates) ";
-
-	for(i = 0; i < size; i++)
+	removeDupl(array_a, current_size);
+	
+	cout << "This is the Array you have entered with the Duplicates removed: ";
+	for (int i = 0; i < current_size; i++)
 	{
-		cout << array_1[i] << " ";
+		cout << array_a[i] << " ";
 	}
 	
 	cout << endl << endl;
 	
-    return 0;
+	
+	return 0;
 }
