@@ -1,12 +1,9 @@
 /*
-
-Write a function that removes duplicates from an array. For example, if remove_
-duplicates is called with an array containing
-1 4 9 16 9 7 4 9 11
-then the array is changed to
-1 4 9 16 7 11
-Your function should have a reference parameter for the array size that is updated when removing the duplicates.
-
+ Program Description: Removes duplicate integers in an array.
+ Program Author: Erik Argueta
+ Variable Inputs: input, arra_1[CAPACITY]
+ Process Flow: Scans through the given array and removes any duplicate integers.
+ Variable Outputs: An array with the duplicates removed.
 */
 
 //#include "stdafx.h"
