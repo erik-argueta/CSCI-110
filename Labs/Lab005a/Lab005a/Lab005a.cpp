@@ -42,7 +42,7 @@ void reverse(double* array, int array_size)
 	cout << endl;
 }
 
-/*
+
 // Function to print the array
 void print(double* array, int size)
 {
@@ -60,7 +60,6 @@ void print(double* array, int size)
 		cout << *position << " ";
 	}
 }
- */
 
 int main()
 {
