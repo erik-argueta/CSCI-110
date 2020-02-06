@@ -63,23 +63,34 @@ void print(double* array, int size)
 
 int main()
 {
-	double array1[] = { 1.3, 4, 5.2, 16.3, 9.99, 7.21, 4.5, 7.43, 11.21, 12.5 };
+	const int CAPACITY = 10;
+	double array1[CAPACITY];
+	int current_size = 0;
+	double input;
 	
-	cout << "Original" << endl;
-	cout << endl;
-	
+	cout << "Please insert an array of values: ";
+	while (current_size < CAPACITY)
 	{
-		for (int i = 0; i < 10; i++)
+		cin >> input;
+		if (current_size < CAPACITY)
 		{
-			cout << array1[i] << " ";
+			array1[current_size] = input;
+			current_size++;
 		}
-		cout << endl;
 	}
 	
 	cout << endl;
 	
-	cout << "Reverse: " << endl;
-	reverse(array1, 10);
+	cout << "Array A" << endl;
+	for (int i = 0; i < CAPACITY; i++)
+	{
+		cout << array1[i] << " ";
+	}
+	
+	cout << endl << endl;;
+	
+	cout << "Array A (reversed): " << endl;
+	reverse(array1, CAPACITY);
 	
 	cout << endl;
 	
