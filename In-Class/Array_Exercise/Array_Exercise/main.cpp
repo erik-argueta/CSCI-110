@@ -1,21 +1,12 @@
 // Array001.cpp : Defines the entry point for the console application.
 //
 
-#include "stdafx.h"
+//#include "stdafx.h"
 #include <iostream>
 #include <algorithm> // allows use of sort()
 
 using namespace std;
 
-double sum(double data[], int size)
-{
-	double total = 0;
-	for (int i = 0; i < CAPACITY; i++)
-	{
-		total = total + data[i];
-	}
-	return total;
-}
 
 int main()
 {
@@ -30,7 +21,7 @@ int main()
 	float a_value;
 	float b_value;
 
-	for (int i = 0; i < current_size; i++)
+	for (int i = 0; i < CAPACITY; i++)
 	{
 		cout << "values [" << i << "] = " << values[i] << endl;
 		/*

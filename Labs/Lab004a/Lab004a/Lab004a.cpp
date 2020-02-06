@@ -1,5 +1,9 @@
 /*
-Program Author: Erik Argueta
+ Program Description: Determines if two arrays are identical.
+ Program Author: Erik Argueta
+ Variable Inputs: input1, input2, input3, input4
+ Process Flow: Scans through the given arrays and scans to see if the arrays are identical.
+ Variable Outputs: Whether the two arrays are identical or not.
 */
 
 
