@@ -23,10 +23,10 @@ void swap(double* a, double* b)
 void reverse(double* array, int array_size)
 {
 	// pointer1 pointing at the beginning of the array
-	double* pointer1 = array;	// array[0]
+	double* pointer1 = array;
 	
 	// pointer2 pointing at the end of the array
-	double* pointer2 = array + array_size - 1;	// array[10]
+	double* pointer2 = array + array_size - 1;
 	
 	while (pointer1 < pointer2)
 	{
@@ -42,25 +42,6 @@ void reverse(double* array, int array_size)
 	cout << endl;
 }
 
-
-// Function to print the array
-void print(double* array, int size)
-{
-	// Points to the last value of array
-	double* length = array + size; 	// double length = array[10] // [10]
-	
-	// Position points to beginning of array
-	double* position = array; 		// double position = array[0] // [0]
-	
-	//cout << "Array = ";
-	for (position = array; position < length; position++)
-//	for ([0] = 0; [0] < [10]; [0]++)
-//	for (double position = 0; position < 10; position++)
-	{
-		cout << *position << " ";
-	}
-}
-
 int main()
 {
 	const int CAPACITY = 10;
@@ -68,7 +49,7 @@ int main()
 	int current_size = 0;
 	double input;
 	
-	cout << "Please insert an array of values: ";
+	cout << "Please insert an array of ten values: ";
 	while (current_size < CAPACITY)
 	{
 		cin >> input;
@@ -81,7 +62,7 @@ int main()
 	
 	cout << endl;
 	
-	cout << "Array A" << endl;
+	cout << "Array A: " << endl;
 	for (int i = 0; i < CAPACITY; i++)
 	{
 		cout << array1[i] << " ";
