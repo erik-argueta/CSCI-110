@@ -19,13 +19,12 @@ using namespace std;
 
 float* read_data(int& size)
 {
-	int max_size = 15;
-	float* array1 = new float[max_size];
+	int max_size = 10;
+	float* array1 = new float[max_size]; 
 	size = 0;
 	float input;
 	
-	cout << "Enter some integers. Press Q when finished." << endl;
-	
+	cout << "Enter some floating-point values. Enter Q when finished." << endl;
 	while (cin >> input)
 	{
 		size++;
@@ -33,6 +32,7 @@ float* read_data(int& size)
 		{
 			array1[size - 1] = input;
 		}
+		
 		else
 		{
 			float* temp = new float[max_size + 1];
@@ -42,21 +42,69 @@ float* read_data(int& size)
 			}
 			
 			temp[max_size] = input;
-			
 			delete[] array1;
+			array1 = new float[2 * max_size];
 			
-			array1 = new float[max_size];
-			
-			for (int i = 0; i < max_size; i++)
+			for (int i = 0; i < max_size + 1; i++)
 			{
 				array1[i] = temp[i];
 			}
 			
 			delete[] temp;
-			
-			max_size = max_size;
+			max_size = max_size * 2;
 		}
 	}
+	
+	cout << endl << "Size: " << size << " max_size: " << max_size << endl;
+	cin.clear(input);
+	cin.ignore();
+	
+	cout << endl << "Array you have entered: " << endl;
+	for (int i = 0; i < size; i++)
+	{
+		cout << array1[i] << " ";
+	}
+	
+	cout << endl << endl;
+	
+	cout << "Please enter five more values. Q to finish." << endl;
+	float input2;
+	max_size = 20;
+	
+	while(cin >> input2)
+	{
+		size++;
+		if (size <= max_size)
+		{
+			array1[size - 1] = input2;
+		}
+		
+		else
+		{
+			float* temp = new float[max_size];
+			for (int i = 0; i < max_size; i++)
+			{
+				temp[i] = array1[i];
+			}
+			
+			temp[max_size] = input;
+			delete[] array1;
+			array1 = new float[2 * max_size];
+			
+			for (int i = 0; i < max_size + 1; i++)
+			{
+				array1[i] = temp[i];
+			}
+			
+			delete[] temp;
+			max_size = max_size * 2;
+		}
+		
+	}
+	
+	cout << endl << "Size: " << size << " max_size: " << max_size << endl;
+	
+	cout << endl;
 	
 	float* return_array = new float[size];
 	for (int i = 0; i < size; i++)
@@ -64,55 +112,10 @@ float* read_data(int& size)
 		return_array[i] = array1[i];
 	}
 	
-	delete[] array1;
-	
-	cin.clear(input);
-	cin.ignore();
+	delete [] array1;
 	
 	return return_array;
 }
-
-/*
-float* read_data2(int& size)
-{
-	cout << "Please enter five more values. Enter Q when finished." << endl;
-	
-	int max_size = 15, input;
-	float* array2 = new float[max_size];
-	
-	while(cin >> input)
-	{
-		size++;
-		if (size <= max_size)
-		{
-			array2[size - 1] = input;
-		}
-		
-		else
-		{
-			float* temp2 = new float[max_size + 1];
-			for (int i = 0; i < max_size; i++)
-			{
-				temp2[i] = array2[i];
-			}
-			
-			temp2[max_size] = input;
-			
-			delete[] temp2;
-			
-			max_size = max_size * 2;
-		}
-	}
-	
-	float* return_array2 = new float[size];
-	for (int i = 0; i < size; i++)
-	{
-		return_array2[i] = array2[i];
-	}
-	
-	delete[] array2;
-	return return_array2;
-} */
 
 int main()
 {
@@ -120,15 +123,14 @@ int main()
 	float* array1;
 	
 	array1 = read_data(size);
-	//array1 = read_data2(size);
-	
+		
+	cout << "Array you have entered in all together: " << endl;
 	for (int i = 0; i < size; i++)
 	{
 		cout << array1[i] << " ";
 	}
 	
-	cout << endl;
+	cout << endl << endl;
 	
-	delete[] array1;
 	return 0;
 }
