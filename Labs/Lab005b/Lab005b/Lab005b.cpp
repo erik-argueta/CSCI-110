@@ -55,7 +55,7 @@ float* read_data(int& size)
 		}
 	}
 	
-	cout << endl << "Size: " << size << " max_size: " << max_size << endl;
+	//cout << endl << "Size: " << size << " max_size: " << max_size << endl;
 	cin.clear(input);
 	cin.ignore();
 	
@@ -102,7 +102,7 @@ float* read_data(int& size)
 		
 	}
 	
-	cout << endl << "Size: " << size << " max_size: " << max_size << endl;
+	//cout << endl << "Size: " << size << " max_size: " << max_size << endl;
 	
 	cout << endl;
 	

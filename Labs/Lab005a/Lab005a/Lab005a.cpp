@@ -30,7 +30,7 @@ void reverse(double* array, int array_size)
 	
 	while (pointer1 < pointer2)
 	{
-		swap(pointer1, pointer2);
+		swap(poin ter1, pointer2);
 		pointer1++;
 		pointer2--;
 	}
