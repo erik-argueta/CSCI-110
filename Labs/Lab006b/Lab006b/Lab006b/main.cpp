@@ -26,7 +26,7 @@ float avg(float& total, int size)
 
 int main() {
 	
-	// /Users/erik-argueta/Desktop/Read-Text/test-text.txt
+	// /Users/erik-argueta/Documents/GitHub/CSCI-110/Labs/Lab006b/numbers.txt
 	
 	string input;
 	
@@ -42,11 +42,11 @@ int main() {
 	}
 	
 	ofstream out_file;
-	out_file.open("/Users/erik-argueta/Desktop/Read-Text/output.txt");
+	out_file.open("//Users/erik-argueta/Documents/GitHub/CSCI-110/Labs/Lab006b/OUTPUT.txt");
 	if (out_file.fail())
 	{
 		cout << "ERROR: File not found." << endl;
-		return 1;
+		return 2;
 	}
 
 	float num1;
@@ -60,12 +60,15 @@ int main() {
 	int counter3 = 10;
 	int counter4 = 10;
 	int size = 10;
-	
-	
 
 	cout << endl;
-	cout << setw(18) << "Column 1" << setw(14) << "Column 2" << endl;
-	out_file << setw(18) << "Column 1" << setw(14) << "Column 2" << endl;
+	cout << setw(19) << "----------" << setw(13) << "----------" << endl;
+	cout << setw(19) << "|Column 1|" << setw(13) << "|Column 2|" << endl;
+	cout << setw(19) << "----------" << setw(13) << "----------" << endl;
+	
+	out_file << setw(19) << "----------" << setw(13) << "----------" << endl;
+	out_file << setw(19) << "|Column 1|" << setw(13) << "|Column 2|" << endl;
+	out_file << setw(19) << "----------" << setw(13) << "----------" << endl;
 	
 	while (counter1 < 10 || counter2 < 10)
 	{
@@ -85,7 +88,7 @@ int main() {
 	if (in_file.fail())
 	{
 		cout << "ERROR: File not found." << endl;
-		return 1;
+		return 3;
 	}
 	
 	while (counter3 > 0 || counter4 > 0)
@@ -98,7 +101,7 @@ int main() {
 		add(in_file, counter4, total2, num2);
 	}
 
-	// /Users/erik-argueta/Desktop/Read-Text/test-text.txt
+	//
 	average1 = avg(total1, size);
 	average2 = avg(total2, size);
 	
