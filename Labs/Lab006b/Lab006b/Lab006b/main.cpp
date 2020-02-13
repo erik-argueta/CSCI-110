@@ -32,7 +32,8 @@ int main() {
 	string input;
 	cout << "Please enter the pathway to your file: ";
 	cin >> input;
-	ifstream in_file; in_file.open(input);
+	ifstream in_file;
+	in_file.open(input);
 	if (in_file.fail())
 	{
 		cout << "ERROR: File not found." << endl;

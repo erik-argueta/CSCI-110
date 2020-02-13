@@ -6,7 +6,7 @@ Process Flow: scans through the input file and placed only names on the output f
 Output Variables: Output file with only the names of babies and a rank of 153
 */
 
-#include "stdafx.h"
+//#include "stdafx.h"
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -63,6 +63,6 @@ int main()
 
 	cout << "Process Complete!" << endl << endl;
 
-	system("pause");
+	//system("pause");
 	return 0;
 }
