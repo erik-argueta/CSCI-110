@@ -49,8 +49,6 @@ int main()
 		}
 		
 	}
-	
-	
 
 	const int SIZE = 10;
 	int current_size = 0;
